@@ -36,6 +36,10 @@ myuserid = binding.myUserId
                 setupZegoUIKit(myUserId)
             }
         }
+        binding.contactUs.setOnClickListener{
+            val intent = Intent(this, Contact_Screen::class.java)
+            startActivity(intent)
+        }
 
     }
     private fun setupZegoUIKit(userID : String){

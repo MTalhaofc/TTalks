@@ -1,57 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Calling_Screen">
-
-    <TextView
-        android:id="@+id/myUserIdText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hi User Id\n Whom you want to call"
-android:layout_marginStart="30dp"
-        android:layout_marginTop="50dp"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="118dp"
-        tools:layout_editor_absoluteY="42dp" />
-
-    <EditText
-        android:id="@+id/target_user_id"
+    android:background="@color/white"
+    >
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="@drawable/input_border"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="100dp"
-        android:hint="Enter User Id"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="132dp" />
+        android:layout_height="120dp"
 
-    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
-        android:id="@+id/video_call_button"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="150dp"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/input_border"
+        android:src="@drawable/right_bottom_radius"
+        />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="70dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginBottom="20dp"
+        android:elevation="20dp"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
 
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="110dp"
-        tools:layout_editor_absoluteY="254dp" />
 
-    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
-        android:id="@+id/audio_call_button"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:background="@drawable/input_border"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="247dp"
-        android:layout_marginStart="90dp"
-        android:layout_marginTop="150dp"
-        tools:layout_editor_absoluteY="254dp" />
+            <ImageView
+                android:id="@+id/tv_calling_screen"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:text="TTalks"
+                android:src="@drawable/main_icon_logo"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/myUserIdText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_calling_screen"
+                android:layout_centerHorizontal="true"
+
+                android:layout_marginTop="40dp"
+                android:text="Hi UserId\nWhom you want to call"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/target_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_below="@id/myUserIdText"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="20dp"
+                android:background="@drawable/input_border"
+                android:hint="Enter User Name"
+                android:padding="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/target_user_id"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:gravity="center"
+                android:id="@+id/btns_call"
+                android:orientation="horizontal">
+                <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+                    android:id="@+id/video_call_button"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/target_user_id"
+                    android:layout_centerHorizontal="true"
+
+                    android:background="@drawable/input_border"
+
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="110dp"
+                    tools:layout_editor_absoluteY="254dp" />
+
+                <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+                    android:id="@+id/audio_call_button"
+                    android:layout_width="60dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_height="60dp"
+                    android:layout_below="@id/target_user_id"
+                    android:background="@drawable/input_border"
+                    tools:ignore="MissingConstraints"
+                    tools:layout_editor_absoluteX="247dp"
+                    tools:layout_editor_absoluteY="254dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/image_view_vector"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_below="@id/btns_call"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:src="@drawable/calling_screen_image" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/image_view_vector"
+                android:layout_centerHorizontal="true"
+                android:id="@+id/tv_connection"
+                android:layout_marginTop="30dp"
+                android:text="S I M P L Y F I N G  C O N N E C T I O N"
+                android:textSize="18sp"
+                android:textColor="@color/black" />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/contactus_background"
+                android:src="@drawable/contactus_icon"
+                android:id="@+id/img_contactus"
+                android:layout_below="@id/tv_connection"
+                android:layout_marginTop="10dp"
+                android:layout_centerHorizontal="true"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:layout_below="@id/img_contactus"
+                android:textColor="@color/black"
+                android:id="@+id/contact_us"
+
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                />
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 
 </RelativeLayout>

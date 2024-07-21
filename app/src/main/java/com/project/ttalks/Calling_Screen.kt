@@ -2,6 +2,7 @@
 
 package com.project.ttalks
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
@@ -53,7 +54,10 @@ class Calling_Screen : AppCompatActivity() {
             }
 
         })
-
+        binding.contactUs.setOnClickListener{
+            val intent = Intent(this, Contact_Screen::class.java)
+            startActivity(intent)
+        }
 
     }
     private fun startVideoCall(targetUserID : String) {

@@ -17,6 +17,9 @@
         android:theme="@style/Theme.Ttalks"
         tools:targetApi="31">
         <activity
+            android:name=".Contact_Screen"
+            android:exported="false" />
+        <activity
             android:name=".Calling_Screen"
             android:exported="false" />
         <activity
