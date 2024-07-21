@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Calling_Screen">
+
+    <TextView
+        android:id="@+id/myUserIdText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi User Id\n Whom you want to call"
+android:layout_marginStart="30dp"
+        android:layout_marginTop="50dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="118dp"
+        tools:layout_editor_absoluteY="42dp" />
+
+    <EditText
+        android:id="@+id/target_user_id"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/input_border"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="100dp"
+        android:hint="Enter User Id"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="132dp" />
+
+    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+        android:id="@+id/video_call_button"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/input_border"
+
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+    <com.zegocloud.uikit.prebuilt.call.invite.widget.ZegoSendCallInvitationButton
+        android:id="@+id/audio_call_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/input_border"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="247dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginTop="150dp"
+        tools:layout_editor_absoluteY="254dp" />
+
+
+</RelativeLayout>

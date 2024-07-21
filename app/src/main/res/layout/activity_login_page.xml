@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login_Page">
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/input_border"
+    android:id="@+id/my_User_Id"
+    android:hint="Username"
+
+    />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+android:layout_marginTop="70dp"
+        android:id="@+id/btn_login_user"
+        android:text="Login"
+        />
+
+
+</RelativeLayout>
